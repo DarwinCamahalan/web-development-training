@@ -98,8 +98,94 @@
             </tbody>
         </table>
 
+        <br>
+        <hr>
+        <br>
+
         <!-- Forms -->
+        <form action="process.php" method="POST">
+            <div>
+                <label for="">First Name</label>
+                <input type="text" name="firstName" placeholder="Enter First Name">    
+            </div>
+
+            <br>
+
+            <div>
+                <label for="">Last Name</label>
+                <input type="text" name="lastName">
+            </div>
+
+            <br>
+            
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email">
+            </div>
+
+            <br>
+            
+            <div>
+                <label for="">Message</label>
+                <textarea name="message" id="" cols="30" rows="10">
+
+                </textarea>
+            </div>
+
+            <br>
+            
+            <div>
+                <label for="">Gender</label>
+                <select name="gender" id="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                </textarea>
+            </div>
+
+            <br>
+            
+            <div>
+                <label for="">Age</label>
+                <input type="number" name="age">
+            </div>
+
+            <br>
+            
+            <div>
+                <label for="">Birthday</label>
+                <input type="date" name="birthday">
+            </div>
+
+            <input type="submit" name="submit" value="Submit">
+
+        </form>
+
+
+        <!-- Button -->
+        <button>Click Me</button>
+
+        <br>
+
+        <!-- Image -->
+        <a href="image.jpg">
+
+            <img src="image.jpg" alt="Sample Image" width="150px" height="150px">
+
+        </a>
+
+        <!-- Quotations -->
+        <blockquote cite="http://google.com">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, nulla!
+        </blockquote>
+
+        <p>The <abbr title="World Wide Web">WWW</abbr> is Awesome</p>
+        
+        <p><cite>HTML Crash Course</cite> Training</p>
 
         
+
+        <div style="margin-top: 500px"></div>
     </body>
 </html>
