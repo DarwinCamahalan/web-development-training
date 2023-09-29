@@ -1,6 +1,6 @@
 // DOM ONLY
 
-/*
+
 // single element
 const form = document.getElementById('my-form')
 console.log(form)
@@ -11,22 +11,61 @@ console.log(document.querySelectorAll('.item'))
 console.log(document.getElementsByClassName('.item'))
 console.log(document.getElementsByTagName('li'))
 
-
 const items = document.querySelectorAll('.item')
-
 items.forEach((item) => console.log(item))
-*/
 
+
+// Add Element to DOM
 const ul = document.querySelector('.items')
 
 ul.firstElementChild.textContent = 'Hello'
 ul.children[1].innerText = 'Brad'
 ul.lastElementChild.innerHTML = '<h1>Hello</h1>'
 
+const btn = document.querySelector('.btn')
+btn.style.background = 'red'
 
 
 
+// Event Listener
+const btn = document.querySelector('.btn')
 
+btn.addEventListener('mouseout', (e) =>{
+    e.preventDefault()
+    document.querySelector('#my-form').style.background = '#ccc'
+    document.querySelector('body').classList.add('bg-dark')
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>'
+
+})
+
+
+
+// Simple TODO List
+const myForm = document.querySelector('#my-form')
+const nameInput = document.querySelector('#name')
+const emailInput = document.querySelector('#email')
+const msg = document.querySelector('.msg')
+const userList = document.querySelector('#users')
+myForm.addEventListener('submit', onSubmit)
+
+
+function onSubmit(e){
+    e.preventDefault()
+    if(nameInput.value === '' || emailInput.value === ''){
+        msg.classList.add('error')
+        msg.innerHTML = 'Please enter all fields'
+        setTimeout(() => msg.remove(), 3000);
+    }else{
+        const li = document.createElement('li')
+
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`))
+        userList.appendChild(li)
+
+        // clear the fields
+        nameInput.value = ''
+        emailInput.value = ''
+    }
+}
 
 
 
